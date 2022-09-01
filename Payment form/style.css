@@ -1,0 +1,25 @@
+input:checked {
+    outline: yellow solid;
+}
+
+#card-number:invalid {
+    border: solid red;
+}
+
+#card-number:valid {
+    border: solid green;
+}
+
+input:invalid {
+    border: solid red;
+}
+
+button:hover {
+    filter: brightness(50%);
+}
+
+input:focus, select:focus {
+    border: none;
+    outline: solid yellow;
+}
+

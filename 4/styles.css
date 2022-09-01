@@ -1,0 +1,12 @@
+.bold {
+    font-weight: bold;
+    color: rgba(255, 255, 0, 0.849);
+}
+body {
+    background: linear-gradient(45deg, blue, red);
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+.seselis {
+    box-shadow: 10px 5px 5px red;
+}

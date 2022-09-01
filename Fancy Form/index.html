@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Register to a fancy form</h1>
+        <p>All fields are <span class="very-marked">required</span> unless marked as "optional"</p>
+        <form action="">
+            <label for="unique-id">Your unique ID that you can't change</label><br>
+            <input type="text" value="YBX789456"  cols="23" readonly><br>
+            <label for="email">Email:</label><br>
+            <input type="email"  cols="23" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password"  cols="23" minlength="8" required><br>
+            <label for="age">Age:</label><br>
+            <input type="number" min="18" max="65"  cols="3" required><br>
+            <label for="about-yourself">Tell us about yourself <span class="smaller">(optional)</span></label><br>
+            <textarea name="about-yourself" id="about-yourself" cols="23" rows="4"></textarea><br>
+            <input type="checkbox" name="i-agree" id="i-agree" required>
+            <span class="all-good">I agree with terms and conditions</span><br>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    
+</body>
+</html>

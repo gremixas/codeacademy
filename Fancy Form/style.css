@@ -1,0 +1,59 @@
+html {
+    text-align: center;
+    color: white;
+    background-color: #125a48;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.smaller {
+    font-size: 0.6em;
+}
+
+.very-marked {
+    background-color: pink;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 15px;
+    background-color: green;
+    color: white;
+    border: 2px solid;
+    border-color: grey black black grey;
+}
+
+button:hover {
+    filter: brightness(75%);
+}
+
+input:read-only {
+    background-color: grey;
+}
+
+input[type=checkbox]:checked + .all-good {
+    color: blue;
+}
+
+input:valid:not([value=""]) {
+    outline: 3.5px solid green;
+    border: none;
+}
+
+input:out-of-range:not([value=""]) {
+    outline: 3.5px solid red;
+    border: none;
+}
+
+input[type="email"]:invalid:not([value=""]) {
+    outline: 3.5px solid red;
+    border: none;
+}
+
+input:required {
+    border: 5px solid;
+    border-color: red red red pink;
+}

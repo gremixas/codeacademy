@@ -1,0 +1,17 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(135deg, grey, white);
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.seselis {
+    box-shadow: 10px 5px 5px grey;
+}

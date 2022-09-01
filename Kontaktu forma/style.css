@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    background: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    background-color: rgb(218, 218, 218);
+    width: 600px;
+    margin: auto;
+    margin-top: 5vw;
+}
+
+input, textarea {
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1.5px 0;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    background-color: rgb(218, 218, 218) !important;
+}
+
+main {
+    padding: 40px;
+}
+
+form {
+    text-align: justify;
+}
+
+label {
+    font-weight: bold;
+}
+
+#submitonas {
+    width: 160px;
+    height: 35px;
+    border-radius: 0;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    margin: 5px 0;
+}

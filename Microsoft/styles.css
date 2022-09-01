@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    background-color: white;
+}
+
+img.micro-logo {
+    padding: 10px 0 20px 0;
+}
+
+img.wallpaper {
+    width: 50%;
+    margin: 20px 20px 20px 20px;
+}
+nav.bar {
+    background-color: green;
+    font-size: 24px;
+    color: black;
+}
+
+nav a {
+    color: white;
+}
+
+section.about {
+    background-color: antiquewhite;
+    margin: 20px 20px 20px 20px;
+}
+
+section.green {
+    background-color: greenyellow;
+    margin: 20px 20px 20px 20px;
+}
+
+h1 {
+    background-color: green;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    text-align: justify;
+    padding: 0 10px 10px 10px;
+}

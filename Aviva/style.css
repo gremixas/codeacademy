@@ -1,0 +1,142 @@
+html {
+    text-align: center;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    align-items: center;
+    background-color: black;
+}
+
+main {
+    margin: auto;
+}
+
+#headeris {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.logo {
+    width: 250px;
+}
+
+.aviva-group {
+    color: white;
+    text-align: left;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 15px;
+    text-align: right;
+}
+
+.menu-list li a {
+    display: inline;
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: left;
+    padding: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+.menu {
+    background-color: #d6b731;
+    height: 50px;
+    padding: auto;
+}
+
+.menu-list li {
+    display: inline;
+    padding: 10px;
+}
+
+.red-button {
+    background-color: #d11e00;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 0 solid #d11e00;
+    margin: 20px;
+}
+
+.my-table, th, td {
+    border: 1.5px solid #d11e00;
+    border-collapse: collapse;
+    color: white;
+}
+
+.my-table {
+    width: 100%;
+}
+
+.my-table tbody td {
+    padding: 10px;
+}
+
+.blue-div {
+    background-color: #021749;
+    width: 100vw;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.white-div {
+    background-color: white;
+    width: 100vw;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.yellow-div {
+    background-color: #d6b731;
+    width: 100vw;
+    padding: 20px 0;
+    color: white;
+}
+
+#tables {
+    max-width: 800px;
+    margin: auto;
+}
+
+#about {
+    max-width: 800px;
+    margin: auto;
+}
+
+#contacts {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contacts-list li {
+    color: black;
+    text-align: left;
+}
+
+.contacts-list li a {
+    color: black;
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.up-button {
+    padding: 15px;
+}

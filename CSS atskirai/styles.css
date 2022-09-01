@@ -1,0 +1,40 @@
+body {
+    background-color: #6da2af;
+    color: brown;
+}
+h1 {
+    color: yellow;
+    margin: 50px;
+}
+
+h2, h3 {
+    color: brown;
+}
+
+p {
+    text-align: justify;
+    text-shadow: 1px 1px 2px black;
+}
+
+.blokas {
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    border-color: brown;
+    border-style: dotted;
+    margin: auto;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.img-border {
+    border-radius: 10%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white blue black green;
+}
+
+.big-letter {
+    font-size: 50px;
+}
