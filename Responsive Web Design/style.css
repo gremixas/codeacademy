@@ -35,7 +35,7 @@
     .grid-itemsas {
         grid-template-columns: repeat(5, 1fr);
         background-color: peachpuff;
-        padding: 10vh 0;
+        padding: 8vh 0;
         text-align: center;
     }
 
@@ -58,7 +58,7 @@
         grid-template-columns: 1fr;
         grid-column: 1/1;
         background-color: chartreuse;
-        padding: 10vh 0;
+        padding: 5vh 0;
         text-align: center;
     }
     .grid-itemsas:nth-child(4) {
