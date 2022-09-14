@@ -1,5 +1,279 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
 }
 
+:root {
+    --main-color: #685cfc;
+    --light-grey: #d3d2d2;
+}
+
+body {
+    margin: auto;
+}
+
+header a {
+    color: black;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    background-color: #363636;
+    padding: 5rem 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+    justify-content: space-evenly;
+}
+
+footer a {
+    color: white;
+}
+
+.wrapper {
+    padding: 0 8vw 5rem 8vw;
+    max-width: 1024px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+}
+
+.titles{
+    margin: 50px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-color-text {
+    color: var(--main-color);
+}
+
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.media-icons {
+    display: flex;
+}
+
+.media-icons i {
+    margin-right: 10px;
+    display: flex;
+}
+
+.fa-brands, .fa-map {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.logo {
+    margin-left: 2rem;
+}
+
+.continue-exploring {
+    color: white;
+    background-color: var(--main-color);
+    min-height: 600px;
+    text-align: center;
+}
+
+.continue-exploring h1 {
+    margin-bottom: 30px;
+}
+
+.continue-exploring a {
+    margin-top: 30px;
+    padding: 0.5rem 1rem;
+    color: white;
+    box-shadow: 1px 1px 4px #363636;
+    border-radius: 3px;
+}
+
+.about-us {
+    padding-bottom: 80px;
+}
+
+.about-us h1 {
+    margin: 4rem auto;
+}
+
+.about-us-hiking-photo {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.about-us p {
+    text-align: justify;
+}
+
+.about-us a {
+    margin-left: 0;
+    align-self: flex-start;
+}
+
+.services {
+    background-color: var(--light-grey);
+}
+
+.services h1 {
+    padding: 4rem 0;
+}
+
+.service-options {
+    background-color: #d3d2d2;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.option {
+    text-align: center;
+    max-width: 250px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.service-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    background-color: var(--main-color);
+}
+
+.option h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.tour {
+    box-shadow: 1px 1px 4px #363636;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.tour h2 {
+    margin: 30px 10px;
+}
+
+.left-right {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.trip-details p {
+    margin: 5px;
+}
+
+.country {
+    color: var(--main-color);
+    font-size: 1.25rem;
+}
+
+.all-tours-anchor {
+    font-size: 1.5rem;
+}
+
+.tour-date {
+    background-color: var(--main-color);
+    text-align: center;
+    font-size: 1.25rem;
+    height: 3rem;
+    width: 20ch;
+    line-height: 3rem;
+    padding: 1rem, 2rem;
+    position: absolute;
+    top: 20px;
+}
+
+.gallery {
+    background-color: var(--light-grey);
+    padding-bottom: 0;
+}
+
+.gallery h1 {
+    margin: 4rem 0;
+}
+
+.gallery-img {
+    border-bottom: 5px solid var(--main-color);
+}
+
+.newsletter {
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+.newsletter > div {
+    width: 50%;
+}
+
+.newsletter-form {
+    /* background-color: white; */
+    margin-bottom: 2rem;
+
+}
+
+#newsletter-email, #newsletter-submit {
+    border: 0;
+    height: 40px;
+    padding: 0 0.5rem;
+    margin: 3px 0;
+}
+
+@media screen and (max-width: 800px) {
+    header nav {
+        display: none;
+    }
+
+}
