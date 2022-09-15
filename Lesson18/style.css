@@ -24,6 +24,7 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    display: none;
 }
 
 main {
@@ -49,7 +50,7 @@ footer a {
 
 .wrapper {
     padding: 0 8vw 5rem 8vw;
-    max-width: 1024px;
+    /* max-width: 1100px; */
 }
 
 ul {
@@ -62,6 +63,8 @@ h1 {
     text-transform: uppercase;
     font-size: 2rem;
     letter-spacing: 0.1em;
+    width: 100%;
+    text-align: center;
 }
 
 .titles{
@@ -129,6 +132,7 @@ header {
     color: white;
     box-shadow: 1px 1px 4px #363636;
     border-radius: 3px;
+    background-color: var(--main-color);
 }
 
 .about-us {
@@ -141,7 +145,7 @@ header {
 
 .about-us-hiking-photo {
     width: 100%;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .about-us p {
@@ -168,17 +172,18 @@ header {
     justify-content: space-between;
     gap: 3rem;
     align-items: flex-start;
-}
-
-.option {
-    text-align: center;
-    max-width: 250px;
     flex-grow: 1;
     flex-shrink: 1;
 }
 
+.option {
+    text-align: center;
+    max-width: 200px;
+    flex-grow: 1;
+}
+
 .service-icon {
-    width: 4.5rem;
+    min-width: 4.5rem;
     height: 4.5rem;
     margin-bottom: 20px;
     font-size: 3rem;
@@ -224,10 +229,8 @@ header {
     background-color: var(--main-color);
     text-align: center;
     font-size: 1.25rem;
-    height: 3rem;
-    width: 20ch;
-    line-height: 3rem;
-    padding: 1rem, 2rem;
+    line-height: 2rem;
+    padding: 0.25rem 0.5rem;
     position: absolute;
     top: 20px;
 }
@@ -259,7 +262,6 @@ header {
 }
 
 .newsletter-form {
-    /* background-color: white; */
     margin-bottom: 2rem;
 
 }
@@ -271,9 +273,106 @@ header {
     margin: 3px 0;
 }
 
-@media screen and (max-width: 800px) {
-    header nav {
-        display: none;
+@media screen and (max-width: 810px) {
+
+    .service-options {
+        justify-content: center;
     }
+    
+}
+
+@media screen and (min-width: 810px) {
+
+    .gallery {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .gallery h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery-img {
+        width: 50%;
+        aspect-ratio: 1 / 1;
+    }
+    
+    .continue-exploring {
+        background: linear-gradient(rgba(74, 63, 218, 0.7), rgba(0, 0, 0, 0.7)),
+        url("assets/hiking-explore.jpg")
+          center/cover no-repeat;
+    }
+
+    .active-tours {
+        display: flex;
+        gap: 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tour {
+        max-width: 47%;
+        /* min-width: 200px; */
+        /* max-width: 250px; */
+        flex-shrink: 1;
+        
+    }
+
+}
+
+@media screen and (min-width: 1050px) {
+    nav ul {
+        display: flex;
+    }
+    
+    .service-options {
+        justify-content: flex-start;
+    }
+    
+
+    .gallery-img {
+        width: 25%;
+        aspect-ratio: 1 / 1;
+    }
+
+     .option {
+        display: flex;
+        /* max-width: 220px;      */
+    }
+
+    .about-us-content {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .about-us-content h1 {
+        margin-top: 0;
+    }
+
+    .about-us-img {
+        position: relative;
+
+    }
+    
+    .about-us-img::before {
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0.5rem solid var(--main-color);
+        top: -1.5rem;
+        left: -1.5rem;
+        z-index: -1;
+    }
+
+    .featured-tours {
+        display: block;
+        text-align: center;
+    }
+
 
 }
