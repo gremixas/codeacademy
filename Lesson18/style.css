@@ -20,7 +20,7 @@ header a {
     font-weight: 600;
 }
 
-nav ul {
+header ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -46,6 +46,28 @@ footer {
 
 footer a {
     color: white;
+}
+
+a {
+    /* position: relative; */
+    transition: all 120ms;
+}
+
+/* a::after {
+    position: absolute;
+} */
+
+a:hover, a:focus {
+    /* content: "";
+    top: 100%;
+    left: 0;
+    width: 110%;
+    height: 20%;
+    background-color: orange; */
+    transform: scale(1.3);
+    font-size: 1.1em;
+    /* transform-origin: bottom; */
+    /* padding: 0 0.5em; */
 }
 
 .wrapper {
@@ -323,7 +345,7 @@ header {
 }
 
 @media screen and (min-width: 1050px) {
-    nav ul {
+    header ul {
         display: flex;
     }
     
