@@ -1,0 +1,51 @@
+@import 'variables.scss';
+
+
+@mixin emmm($dydis: 1.25em) {
+    font-size: $dydis;
+}
+
+body {
+    font: 100% $fontas;
+    color: $spalva;
+    background-color: aquamarine;
+
+    ul {
+        margin: 10px;
+    }
+
+    li {
+        display: inline-block;
+
+    }
+    li:nth-child(odd) {
+        background-color: rgba(214, 52, 52, 0.884);
+        @include emmm($dydis: 1.75em);
+    }
+
+    .photo-div {
+        // background-image: url('http://picsum.photos/100');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        height: 150px;
+        width: 150px;
+        background-color: mix(blue,red, 60%);
+    }
+
+    #some-div {
+        @extend .photo-div;
+        height: 250px;
+    }
+
+    div {
+        height: 50px;
+        width: 50px;
+    }
+    @for $i from 1 through 10 {
+        .darken#{$i} {
+            background-color: darken($div-color, 0% + $i * 5);
+        }
+    }
+}
+
+

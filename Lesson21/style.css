@@ -1,0 +1,57 @@
+body {
+  font: 100% sans-serif;
+  color: rgb(199, 51, 125);
+  background-color: aquamarine;
+}
+body ul {
+  margin: 10px;
+}
+body li {
+  display: inline-block;
+}
+body li:nth-child(odd) {
+  background-color: rgba(214, 52, 52, 0.884);
+  font-size: 1.75em;
+}
+body .photo-div, body #some-div {
+  height: 150px;
+  width: 150px;
+  background-color: #660099;
+}
+body #some-div {
+  height: 250px;
+}
+body div {
+  height: 50px;
+  width: 50px;
+}
+body .darken1 {
+  background-color: rgba(255, 21, 21, 0.7411764706);
+}
+body .darken2 {
+  background-color: rgba(250, 0, 0, 0.7411764706);
+}
+body .darken3 {
+  background-color: rgba(225, 0, 0, 0.7411764706);
+}
+body .darken4 {
+  background-color: rgba(199, 0, 0, 0.7411764706);
+}
+body .darken5 {
+  background-color: rgba(174, 0, 0, 0.7411764706);
+}
+body .darken6 {
+  background-color: rgba(148, 0, 0, 0.7411764706);
+}
+body .darken7 {
+  background-color: rgba(123, 0, 0, 0.7411764706);
+}
+body .darken8 {
+  background-color: rgba(97, 0, 0, 0.7411764706);
+}
+body .darken9 {
+  background-color: rgba(72, 0, 0, 0.7411764706);
+}
+body .darken10 {
+  background-color: rgba(46, 0, 0, 0.7411764706);
+}/*# sourceMappingURL=style.css.map */
