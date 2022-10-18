@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 50vh;
+}
