@@ -1,0 +1,35 @@
+th {
+    text-align: left;
+}
+
+table {
+    margin-top: 2rem;
+}
+
+label {
+    margin-left: 3rem;
+}
+
+th, td {
+    padding: 0 1rem;
+}
+
+thead {
+    background-color: #eee;
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: #eee;
+}
+
+tbody > tr:nth-child(2n+1) {
+    background-color: #ddd;
+}
+
+body {
+    margin: 2rem;
+}
+
+img {
+    height: 2rem;
+}

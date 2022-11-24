@@ -4,19 +4,38 @@ const NAME_REQUIRED = "Vardo laukas privalomas";
 const EMAIL_REQUIRED = "El. pašto laukas privalomas";
 const EMAIL_INVALID = "Neteisingai įvestas el. paštas";
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  const nameField = form.elements["name"];
-  const emailField = form.elements["email"];
+//   const nameField = form.elements["name"];
+//   const emailField = form.elements["email"];
 
-  const nameValid = hasValue(nameField, NAME_REQUIRED);
-  const emailValid = validateEmail(emailField, EMAIL_REQUIRED, EMAIL_INVALID);
+//   const nameValid = hasValue(nameField, NAME_REQUIRED);
+//   const emailValid = validateEmail(emailField, EMAIL_REQUIRED, EMAIL_INVALID);
 
-  if (nameValid && emailValid) {
-    alert("Duomenys įvesti teisingai");
-  }
-});
+//   if (nameValid && emailValid) {
+//     alert("Duomenys įvesti teisingai");
+//   }
+// });
+
+// form.addEventListener('submit', (event) => duomenys(event))
+
+// function duomenys(event) {
+const duomenys = (event) => {
+        event.preventDefault();
+
+    const nameField = form.elements["name"];
+    const emailField = form.elements["email"];
+  
+    const nameValid = hasValue(nameField, NAME_REQUIRED);
+    const emailValid = validateEmail(emailField, EMAIL_REQUIRED, EMAIL_INVALID);
+  
+    if (nameValid && emailValid) {
+      alert("Duomenys įvesti teisingai");
+    }
+ 
+}
+form.addEventListener('submit', duomenys)
 
 function showMessage(input, message) {
   const msg = input.parentNode.querySelector("small");
