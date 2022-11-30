@@ -1,0 +1,38 @@
+:root {
+    --border-clr: #ACCFA3;
+    --background-clr: #E2EEDE;
+    --bnt-clr: #407032;
+}
+
+main, .task {
+    border: 3px solid var(--border-clr);
+    border-radius: 10px;
+}
+
+.task {
+    background-color: var(--background-clr);
+}
+
+.btn-primary {
+    background-color: var(--bnt-clr);
+    border: 1px solid var(--bnt-clr);
+    transition: all 250ms ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--bnt-clr);
+    scale: 1.1;
+    border: 1px solid var(--bnt-clr);
+}
+
+.fas {
+    transition: all 250ms ease-in-out;
+}
+
+.fas:hover {
+    scale: 2;
+}
+
+.container {
+    width: 800px;
+}

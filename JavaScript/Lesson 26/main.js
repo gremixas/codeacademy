@@ -15,7 +15,7 @@ const fetchData = async (dataApi) => {
 function renderExperiences(experiences) {
     const experiencesSection = document.querySelector('.experience');
     const experiencesSectionH2 = document.querySelectorAll('.section-header');
-    console.log(experiencesSectionH2)
+    // console.log(experiencesSectionH2)
     experiencesSectionH2.forEach(h2 => h2.style.display = "block")
     let experienceCards = '';
     experiences.forEach(experience => {
