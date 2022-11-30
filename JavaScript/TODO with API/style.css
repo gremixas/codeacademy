@@ -8,12 +8,6 @@
     --bs-btn-active-border-color: #407032;
 }
 
-/* :not(.btn-check)+.btn:active {
-    color: var(--bs-btn-active-color);
-    background-color: var(--bs-btn-active-bg);
-    border-color: var(--bs-btn-active-border-color);
-} */
-
 main, .task {
     border: 3px solid var(--border-clr);
     border-radius: 10px;
@@ -34,12 +28,6 @@ main, .task {
     border: 1px solid var(--bnt-clr);
     filter: contrast(3);
 }
-/* 
-.btn-primary:active {
-    background-color: var(--bnt-clr);
-    border: 1px solid var(--bnt-clr);
-    filter: brightness(1.3);
-} */
 
 .options > .fas {
     font-size: 1.5rem;
@@ -52,14 +40,6 @@ main, .task {
     scale: 2;
     filter: contrast(3);
 }
-
-/* .fas + .fas {
-    margin: 5rem;
-} */
-
-/* .options {
-    gap: 2rem;
-} */
 
 .container {
     width: 800px;

@@ -30,9 +30,10 @@ function displayData(tasks) {
         const delBtn = node.querySelector('.fa-trash-alt');
         editBtn.addEventListener('click', () => editTaskModalCall(node.getAttribute('task-id')))
         delBtn.addEventListener('click', () => {
-            node.remove();
-            deleteData(node.getAttribute('task-id'));
+            // node.remove();
+            deleteData(node.getAttribute('task-id')).then(data => displayData(data));
         });
+        // console.log(editBtn.target)
     })
 }
 
@@ -43,7 +44,6 @@ function editTaskModalCall(id) {
     document.querySelector('#edit-date').value = taskElement.querySelector('h3').innerText;
     document.querySelector('#edit-description').value = taskElement.querySelector('p').innerText;
     document.querySelector('#edit-form').setAttribute('task-id', id);
-    const editTaskModal = bootstrap.Modal.getInstance(editTaskModalEl);
     const errorDiv = document.querySelector(".edit-error");
     errorDiv.innerText = '';
     editTaskModal.show();
@@ -54,7 +54,7 @@ formEditTask.onsubmit = async (event) => {
     event.preventDefault();
     const errorDiv = document.querySelector(".edit-error");
     const textInput = document.querySelector("#edit-task").value;
-    const idTask = event.target.getAttribute('task-id');
+    const taskId = event.target.getAttribute('task-id');
     if (textInput === "") {
         errorDiv.textContent = "Įveskite užduoties pavadinimą";
     } else {
@@ -64,9 +64,9 @@ formEditTask.onsubmit = async (event) => {
             text: textInput,
             date: dateInput,
             description: descriptionInput,
-            id: +idTask,
+            id: +taskId,
         }
-        putData(data, idTask).then(response => {
+        putData(data).then(response => {
             if (response.find(item => item.id === data.id)) {
                 errorDiv.textContent = "Sėkmingai išsaugota.";
                 setTimeout(() => {
