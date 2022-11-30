@@ -27,9 +27,7 @@ function displayData(tasks) {
     const taskElements = taskContainer.querySelectorAll('[task-id]');
     taskElements.forEach(node => {
         const editBtn = node.querySelector('.fa-edit');
-        editBtn.style.cursor = 'pointer';
         const delBtn = node.querySelector('.fa-trash-alt');
-        delBtn.style.cursor = 'pointer';
         editBtn.addEventListener('click', () => editTaskModalCall(node.getAttribute('task-id')))
         delBtn.addEventListener('click', () => {
             node.remove();
@@ -39,7 +37,8 @@ function displayData(tasks) {
 }
 
 function editTaskModalCall(id) {
-    const taskElement = document.querySelector(`[task-id="${id}"]`);
+    const taskContainer = document.querySelector(".tasks");
+    const taskElement = taskContainer.querySelector(`[task-id="${id}"]`);
     document.querySelector('#edit-task').value = taskElement.querySelector('h2').innerText;
     document.querySelector('#edit-date').value = taskElement.querySelector('h3').innerText;
     document.querySelector('#edit-description').value = taskElement.querySelector('p').innerText;
@@ -125,7 +124,6 @@ formAddTask.onsubmit = async (event) => {
 async function deleteAllData() {
     try {
         const data = await fetchData();
-        console.log(data);
         data.forEach(id => deleteData(id));
     } catch (err) {
         console.log(err);
