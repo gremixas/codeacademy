@@ -17,9 +17,9 @@ function displayData(tasks) {
             <h2>${task.text}</h2>
             <h3>${task.date}</h3>
             <p>${task.description}</p>
-            <span class="options d-flex justify-content-center">
-                <i class="fas fa-edit m-3"></i>
-                <i class="fas fa-trash-alt m-3"></i>
+            <span class="options d-flex justify-content-around">
+                <i class="fas fa-edit m-1 p-2"></i>
+                <i class="fas fa-trash-alt m-1 p-2"></i>
             </span>
         </div>`
     });

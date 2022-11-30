@@ -21,17 +21,28 @@ main, .task {
 
 .btn-primary:hover {
     background-color: var(--bnt-clr);
-    scale: 1.1;
     border: 1px solid var(--bnt-clr);
+    filter: contrast(3);
 }
 
-.fas {
+.options > .fas {
+    font-size: 1.5rem;
     transition: all 250ms ease-in-out;
+    color: var(--bnt-clr);
 }
 
-.fas:hover {
+.options > .fas:hover {
     scale: 2;
+    filter: contrast(3);
 }
+
+/* .fas + .fas {
+    margin: 5rem;
+} */
+
+/* .options {
+    gap: 2rem;
+} */
 
 .container {
     width: 800px;
