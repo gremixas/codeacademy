@@ -4,6 +4,14 @@ const addTaskModalEl = document.getElementById('addTaskModal');
 const addTaskModal = new bootstrap.Modal(addTaskModalEl);
 const editTaskModalEl = document.getElementById('editTaskModal');
 const editTaskModal = new bootstrap.Modal(editTaskModalEl);
+addTaskModalEl.addEventListener('hide.bs.modal', () => console.log('closed'))
+
+const addTaskSpinner = document.querySelector('#addTaskModal span');
+const editTaskSpinner = document.querySelector('#editTaskModal span');
+// spinner.style.display = 'block';
+
+const addSubmitButton = document.querySelector('#addTaskModalSubmitBtn');
+const editSubmitButton = document.querySelector('#editTaskModalSubmitBtn');
 
 const addTaskModalBtn = document.querySelector('#addTaskModalBtn');
 addTaskModalBtn.addEventListener('click', () => addTaskModal.show());
@@ -66,11 +74,17 @@ formEditTask.onsubmit = async (event) => {
             description: descriptionInput,
             id: +taskId,
         }
+        editTaskSpinner.style.display = 'block';
+        editSubmitButton.setAttribute('disabled', '');
+        console.log(editSubmitButton)
         putData(data).then(response => {
             if (response.find(item => item.id === data.id)) {
+                editTaskSpinner.style.display = 'none';
                 errorDiv.textContent = "Sėkmingai išsaugota.";
                 setTimeout(() => {
                     editTaskModal.hide();
+                    editSubmitButton.removeAttribute('disabled');
+                    console.log(editSubmitButton)
                     displayData(response);
                 }, 2000);
             } else {
@@ -96,11 +110,17 @@ formAddTask.onsubmit = async (event) => {
             description: descriptionInput,
             id: Math.floor(Math.random() * 1000 + 1),
         }
+        addTaskSpinner.style.display = 'block';
+        addSubmitButton.setAttribute('disabled', '');
+        console.log(addSubmitButton)
         postData(data).then(response => {
             if (response.find(item => item.id === data.id)) {
+                addTaskSpinner.style.display = 'none';
                 errorDiv.textContent = "Sėkmingai išsaugota.";
                 setTimeout(() => {
                     addTaskModal.hide();
+                    console.log(addSubmitButton)
+                    addSubmitButton.removeAttribute('disabled');
                     displayData(response);
                 }, 2000);
             } else {

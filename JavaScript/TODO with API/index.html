@@ -43,9 +43,10 @@
                 <textarea rows="4" class="form-control" id="add-description"></textarea>
               </div>
               <div class="modal-footer">
+                <span class="loader"></span>
                 <div class="add-error"></div>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Uždaryti</button>
-                <button type="submit" class="btn btn-primary">Išsaugoti</button>
+                <button id="addTaskModalSubmitBtn" type="submit" class="btn btn-primary">Išsaugoti</button>
               </div>
             </form>
           </div>
@@ -74,9 +75,10 @@
                   <textarea rows="4" class="form-control" id="edit-description"></textarea>
                 </div>
                 <div class="modal-footer">
+                  <span class="loader"></span>
                   <div class="edit-error"></div>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Uždaryti</button>
-                  <button type="submit" class="btn btn-primary">Išsaugoti</button>
+                  <button id="editTaskModalSubmitBtn" type="submit" class="btn btn-primary">Išsaugoti</button>
                 </div>
               </form>
             </div>
