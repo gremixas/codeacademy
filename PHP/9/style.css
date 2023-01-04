@@ -1,0 +1,17 @@
+img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+thead {
+    background-color: #bbb;
+}
+
+tbody > tr:nth-child(2n+1) {
+    background-color: #ddd;
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: #ccc;
+}
