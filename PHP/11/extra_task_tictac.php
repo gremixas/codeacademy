@@ -82,7 +82,7 @@ function checkForWinner(array $game, string $filePath): void
         $game[0] === "X" && $game[4] === "X" && $game[8] === "X" ||
         $game[2] === "X" && $game[4] === "X" && $game[6] === "X"
     ) {
-        recho("\n\n\033[01;31myou've won!\033[0m\n\n");
+        recho("\n\nyou've won!\n\n");
         saveGame($filePath, $game);
         showGame($game);
         die();
