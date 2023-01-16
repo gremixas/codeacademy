@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
     <?=
     "<article>
         <div class=image>
-            <img src='https://loremflickr.com/".rand(600, 680)."/".rand(460, 500)."/dog'>
+            <img src='https://loremflickr.com/".rand(600, 680)."/".rand(460, 500)."/animals'>
         </div>
         <div class=pet_info>
             <h3>{$pet['name']}</h3>

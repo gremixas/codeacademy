@@ -1,5 +1,5 @@
 <?php
-use function CommonMark\Render\HTML;
+// use function CommonMark\Render\HTML;
 
 include_once(__DIR__ . "/pet_functions.php");
 
@@ -22,10 +22,11 @@ include_once(__DIR__ . "/pet_functions.php");
         </div>
         <section class="cards">
             <?php
-            foreach (getPets($filePath) as $pet) {
+            $pets = getPets($filePath);
+            foreach ($pets as $pet) {
                 echo "<article data={$pet['id']}>
                         <div class=image>
-                            <img src='https://loremflickr.com/".rand(600, 680)."/".rand(460, 500)."/dog'>
+                            <img src='https://loremflickr.com/".rand(600, 680)."/".rand(460, 500)."/animals'>
                             <div class=links>
                                 <a href='update_pet.php?id={$pet['id']}'>Update pet</a>
                                 <a href='delete_pet.php?id={$pet['id']}'>Delete pet</a>

@@ -43,7 +43,15 @@ include_once(__DIR__ . "/pet_functions.php");
         $oldData = json_decode($json, true);
 
         if (isset($_GET['status']) && $_GET['status'] == 1) {
-            updateRecord($filePath, (int)$oldData['id'], $oldData['name'], (int)$oldData['age'], $oldData['breed'], $oldData['kind'], (int)$oldData['weight'], (int)$oldData['height']);
+            updateRecord($filePath, [
+                "id" => $oldData['id'],
+                "name" => $oldData['name'],
+                "age" => $oldData['age'],
+                "breed" => $oldData['breed'],
+                "kind" => $oldData['kind'],
+                "weight" => $oldData['weight'],
+                "height" => $oldData['height']
+            ]);
             header("Location: index.php");
         }
 
