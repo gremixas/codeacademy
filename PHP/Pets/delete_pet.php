@@ -15,16 +15,16 @@ include_once(__DIR__ . "/pet_functions.php");
     if (isset($_GET['id'])) {
         $pet = getPet(getPets($filePath), $_GET['id']);
         if (empty($pet)) {
-            echo "Nera gyvuno su tokiu Id";
-            die;
+            exit("Nera gyvuno su tokiu Id");
+            // die;
         } else {
             deleteRecord($filePath, (int)$_GET['id']);
             echo "<h2>Istrinta.</h2>";
             header("Location: index.php");
         }
     } else {
-        echo "Id nereikia?";
-        die;
+        exit("Id nereikia?");
+        // die;
     }
     ?>
 </body>

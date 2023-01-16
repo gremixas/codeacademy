@@ -19,12 +19,10 @@ include_once(__DIR__ . "/pet_functions.php");
         if (isset($_GET['id'])) {
             $pet = getPet(getPets($filePath), $_GET['id']);
             if (empty($pet)) {
-                echo "Nera gyvuno su tokiu Id";
-                die;
+                exit("Nera gyvuno su tokiu Id");
             }
         } else {
-            echo "Id nereikia?";
-            die;
+            exit("Id nereikia?");
         }
         function message(string $title = '', string $body = '', int $status = 1): string {
             $colors = ["red", "green", "blue"];
