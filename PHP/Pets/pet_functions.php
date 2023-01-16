@@ -27,7 +27,7 @@ function createRecord(string $filePath, string $name, int $age, string $breed, s
         "height" => $height
     ];
     array_push($pets, $newPet);
-    print_r($pets);
+    // print_r($pets);
     file_put_contents($filePath, json_encode($pets));
     return $newId;
 }

@@ -19,12 +19,15 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="show.js"></script>
 </head>
 <body>
     <?=
     "<article>
-        <img src='https://loremflickr.com/".rand(460, 500)."/".rand(460, 500)."'/animals'>
-        <div>
+        <div class=image>
+            <img src='https://loremflickr.com/".rand(600, 680)."/".rand(460, 500)."/dog'>
+        </div>
+        <div class=pet_info>
             <h3>{$pet['name']}</h3>
             <div class=row>
                 <span>Amžius:</span><span>{$pet['age']}</span>

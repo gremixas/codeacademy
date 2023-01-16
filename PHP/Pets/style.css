@@ -41,27 +41,66 @@ article {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     padding-bottom: 1rem;
     width: 20rem;
+    overflow: hidden;
 }
 
-article > div {
+.pet_info {
     width: 80%;
 }
 
-article > *:not(img) {
+article > *:not(.image) {
     margin: 0.25rem;
     font-size: 1rem;
 }
 
-article > img {
-    width: 100%;
+article .image {
+    height: 20rem;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     /* padding: 1rem; */
+    overflow: hidden;
     border-radius: 2.5rem 0 2.5rem 0;
+    filter: grayscale(50%);
+    transition: all 250ms ease-in-out;
+    position: relative;
+}
+
+article:hover .image {
+    filter: grayscale(0%);
+}
+
+img {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: all 250ms ease-in-out;
+}
+
+article:hover img {
+    scale: 1.2;
 }
 
 article > div > h3 {
     font-size: 1.5rem;
+}
+
+.links {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.image:hover .links {
+    opacity: 1;
 }
 
 .row {

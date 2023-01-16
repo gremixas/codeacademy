@@ -26,10 +26,6 @@ include_once(__DIR__ . "/pet_functions.php");
         echo "Id nereikia?";
         die;
     }
-    if (isset($_GET['id']) && !empty($_GET['id'])) {
-        deleteRecord($filePath, (int)$_GET['id']);
-        header("Location: index.php");
-    }
     ?>
 </body>
 </html>
