@@ -36,10 +36,10 @@ class Parking {
 }
 
 $carPlates = readMyFile($filePath);
+$parking = new Parking();
 
 if ($agrsSet && $arg1 === "park_car") {
     $car = new Car($arg2);
-    $parking = new Parking();
     $parking->parkCar($car);
     $carPlates = array_merge($carPlates, $parking->carPlates);
     file_put_contents($filePath, json_encode($carPlates));
