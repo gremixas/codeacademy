@@ -35,22 +35,22 @@ class Parking {
 
 }
 
+$carPlates = readMyFile($filePath);
+
 if ($agrsSet && $arg1 === "park_car") {
     $car = new Car($arg2);
     $parking = new Parking();
     $parking->parkCar($car);
-    $cars = readMyFile($filePath);
-    $cars = array_merge($cars, $parking->carPlates);
-    file_put_contents($filePath, json_encode($cars));
+    $carPlates = array_merge($carPlates, $parking->carPlates);
+    file_put_contents($filePath, json_encode($carPlates));
     echo "Car {$arg2} parked!\n";
 } elseif ($arg1 === "list_cars") {
-    $cars = readMyFile($filePath);
-    if (empty($cars)) {
+    if (empty($carPlates)) {
         echo "No cars parked.\n";
     } else {
         echo "Parked cars:\n";
-        foreach ($cars as $car) {
-            echo "{$car}\n";
+        foreach ($carPlates as $carPlate) {
+            echo "{$carPlate}\n";
         }
     }
 } else {
