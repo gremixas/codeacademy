@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
         $url = "register_form.php";
     } else {
         // unset($_SESSION['register_form_data']);
-        Validate::setSuccessMessage();
+        Validate::setSuccessMessage("Registered");
         
         $post = $_POST;
         $post['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] != "POST") {
         $user = new User($post['first_name'], $post['last_name'], $post['email'], $post['password']);
         User::createUser($user);
 
-        $url = "login_form.php";
+        $url = "index.php";
     }
 
     header("Location: $url");

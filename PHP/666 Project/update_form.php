@@ -56,12 +56,13 @@ if (empty($_GET['id'])) {
                 </form>
             </div>
             <br>
-            <div class="messages">
-                <?= Messages::get() ?>
-            </div>
         </div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <?php
+        include_once(__DIR__ . "/footer.php");
+        ?>
+    </footer>
     <script>
         const userLoggedIn = <?=$userLoggedIn?>;
         const adminLoggedIn = <?=$adminLoggedIn?>;

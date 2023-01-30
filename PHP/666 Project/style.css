@@ -13,9 +13,11 @@ body {
     font-family: 'Unbounded', cursive;
     max-width: 1028px;
     min-width: 400px;
+    min-height: 100vh;
     margin: auto;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
+    display: flex;
+    flex-direction: column;
 }
 
 li {
@@ -69,6 +71,7 @@ header {
 }
 
 .logo-area {
+    position: relative;
     height: 100%;
     justify-content: space-between;
     align-items: center;
@@ -183,7 +186,6 @@ header {
 
 .arrow-down-icon {
     height: 0.75rem;
-    /* align-self: flex-end; */
     padding: 0.25rem 0.25rem 0 0.25rem;
 }
 
@@ -193,7 +195,6 @@ header {
 
 .login-links {
     gap: 1rem;
-    /* display: none; */
 }
 
 .login-area > .login-links {
@@ -253,16 +254,21 @@ input + input {
 }
 
 .messages {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 0.5rem;
 }
 
 .message {
-    width: 300px;
-    min-height: 50px;
-    padding: 0.5rem;
+    width: 100%;
+    /* min-height: 50px; */
+    padding: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
@@ -426,11 +432,18 @@ input + input {
     place-items: center;
 }
 
-/* .delete-dialog button:hover {
-    background-color: rgba(255, 0, 0, 0.5);
-    outline: 1px solid black;
-    border: 1px solid rgba(255, 0, 0, 0.5);
-} */
+footer {
+    margin-top: auto;
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+    color: white;
+    display: grid;
+    place-content: center;
+    border-radius: 3px 3px 0 0;
+}
+
+
 
 @media screen and (min-width: 876px) {
     .login-area > .login-links {

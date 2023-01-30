@@ -35,12 +35,12 @@ $_SESSION['login_form_data'] = json_encode($_POST);
         // $url = "login_form.php";
     } else {
         // unset($_SESSION['login_form_data']);
-        Validate::setSuccessMessage();
+        Validate::setSuccessMessage("Logged in.");
 
         $_SESSION['token'] = $user['password'];
 
         // $url = "bookings.php";
-        // $url = "login_form.php";
+        $url = "index.php";
     }
 
     header("Location: $url");

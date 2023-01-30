@@ -27,10 +27,13 @@ include_once(__DIR__ . "/app.php");
         </div>
     </main>
     <footer id="footer">
+        <?php
+        include_once(__DIR__ . "/footer.php");
+        ?>
     </footer>
     <script>
-        const userLoggedIn = <?=$userLoggedIn?>;
-        const adminLoggedIn = <?=$adminLoggedIn?>;
+        const userLoggedIn = <?=$userLoggedIn?>;// transport PHP variable to JS
+        const adminLoggedIn = <?=$adminLoggedIn?>;// Shitty solution? IDK... Probably.
     </script>
 </body>
 </html>

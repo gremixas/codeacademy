@@ -59,6 +59,8 @@ if (!isset($_POST['id'])) {
 
     if (empty($_SESSION['messages'])) {
         Car::updateCar($car);
+        Validate::setSuccessMessage("Updated.");
+        $url = "index.php";
     }
 
     header("location: $url");

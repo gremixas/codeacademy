@@ -27,7 +27,6 @@
                     echo "<a href='./bookings.php'>Bookings</a>";
                 }
                 ?>
-                <!-- <a href="./bookings.php">Bookings</a> -->
                 <a href="./profile.php">Profile</a>
                 <a href="./logout.php?logout=1">Logout</a>
             </div>
@@ -47,5 +46,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="messages">
+        <?= Messages::get() ?>
     </div>
 </header>

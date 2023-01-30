@@ -13,6 +13,9 @@ if (!adminCheck()) {
 if (!isset($_GET['id'])) {
     die("ID nereikia?");
 } else {
+    $imageFile = Car::findCarById($_GET['id'])['image'];
+    unlink(__DIR__ . "/car_images\/" . $imageFile);
     Car::deleteCarById($_GET['id']);
+    Validate::setSuccessMessage("Deleted.");
     header("location: index.php");
 }

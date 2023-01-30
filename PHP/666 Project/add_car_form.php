@@ -47,34 +47,16 @@ $oldData = json_decode($_SESSION['add_car_form_data'], 1);
                 </form>
             </div>
             <br>
-            <div class="messages">
-                <?= Messages::get() ?>
-            </div>
         </div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <?php
+        include_once(__DIR__ . "/footer.php");
+        ?>
+    </footer>
     <script>
         const userLoggedIn = <?=$userLoggedIn?>;
         const adminLoggedIn = <?=$adminLoggedIn?>;
-
-        const interval = 3000;
-        let timeout = 3000;
-        const myInterval = setInterval(deteleElement, interval);
-
-        function deteleElement() {
-            const message = document.querySelector(".message");
-            if (message === null) {
-                clearInterval(myInterval);
-                return;
-            }
-            message.style.opacity = "0";
-            setTimeout(() => {
-                message.style.display = "none";
-            }, 300);
-            setTimeout(() => {
-                message.remove();
-            }, timeout - 100);
-        }
     </script>
 </body>
 </html>
