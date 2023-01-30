@@ -79,8 +79,8 @@ if ($_SESSION['authenticated'] ?? false) {
             </form>
             <div class="messages">
                 <?php
-                // Messages::get();
-                new Messages();
+                Messages::get();
+                // new Messages();
                 ?>
             </div>
         </section>

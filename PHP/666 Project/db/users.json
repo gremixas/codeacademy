@@ -1,0 +1,24 @@
+[
+    {
+        "first_name": "Admin",
+        "last_name": "Administrator",
+        "email": "admin@admin.lt",
+        "password": "$2y$10$6AiTJ.QUF6Mvb\/8iQrq7oOHvvZklwCvmmb8Ic7gBtCtjklYixdFba",
+        "admin": "yes",
+        "id": "1"
+    },
+    {
+        "first_name": "Andrius",
+        "last_name": "Agafonovas",
+        "email": "andrius.agafonovas@gmail.com",
+        "password": "$2y$10$hT8Fn4t1Yyy3bzlG3\/mYcO.M4I9kh9lol5LHG0Mn\/qSgU5JKkn.1m",
+        "id": "2"
+    },
+    {
+        "first_name": "Milda",
+        "last_name": "Agafonove",
+        "email": "milda.agafonove@gmail.com",
+        "password": "$2y$10$FyV23fWq1G2ruoE9sca3rejGCj4ruTBxAYRCzhx6Q\/fFC3uYacJ2m",
+        "id": "3"
+    }
+]

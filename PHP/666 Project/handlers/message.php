@@ -1,24 +1,26 @@
 <?php
 
-declare(strict_types=1);
-
 class Messages {
     private const COLORS = ["red", "green", "blue"];
-    private const TITLES = ["Klaida", "Operacija sekminga", "Info"];
+    private const TITLES = ["Error", "Success", "Info"];
 
-    // public function __construct(){
-    //     self::get();
-    // }
+    public function __toString(): string {
+        return self::get();
+    }
 
-    public static function get(): void {
+    public static function get(): string {
         $messages = self::getMessages();
-        echo self::buildAllMessages($messages);
+        return self::buildAllMessages($messages);
     }
 
     private static function getMessages(): array {
         $messages = $_SESSION['messages'] ?? [];
-        unset($_SESSION['messages']);
+        self::clearMessages();
         return $messages ?? [];
+    }
+
+    private static function clearMessages(): void {
+        unset($_SESSION['messages']);
     }
 
     private static function buildAllMessages(array $messages = []): string {
