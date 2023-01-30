@@ -156,9 +156,9 @@ header {
 }
 
 .user-menu-dropdown {
-    width: fit-content;
+    width: 120px;
     position: absolute;
-    right: -300px;
+    left: 300px;
     top: 3rem;
     padding: 1rem;
     flex-direction: column;
@@ -173,7 +173,7 @@ header {
 .user-menu:hover .user-menu-dropdown {
     height: fit-content;
     opacity: 1;
-    right: 0;
+    left: 0px;
 }
 
 .user-icon {
@@ -241,10 +241,18 @@ button {
 input {
     font-size: 1.25rem;
     padding: 0.5rem;
+    width: 300px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.register-messages,
-.login-messages {
+input + input {
+    margin-top: 1rem;
+}
+
+.messages {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,6 +307,8 @@ input {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
+    max-width: 450px;
+    margin: auto;
 }
 
 .car-img-container {
@@ -314,11 +324,12 @@ input {
     width: 100%;
     object-fit: cover;
     transition: all 750ms ease-in-out;
-    transform-origin: 0 0;
+    transform-origin: 80% 50%;
 }
 
 .car-card:hover .car-img {
     scale: 1.2;
+    transform: rotate3d(0, 1, 0, 15deg);
 }
 
 .car-row {
@@ -401,6 +412,25 @@ input {
     top: 50%;
     right: 20%;
 }
+
+.delete-dialog,
+.update-dialog {
+    display: grid;
+    place-content: center;
+    padding: 3rem;
+}
+
+.delete-dialog > form,
+.update-dialog > form {
+    display: grid;
+    place-items: center;
+}
+
+/* .delete-dialog button:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    outline: 1px solid black;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+} */
 
 @media screen and (min-width: 876px) {
     .login-area > .login-links {

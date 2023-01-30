@@ -1,10 +1,7 @@
 <?php
 include_once(__DIR__ . "/app.php");
-$oldData = json_decode($_SESSION['login_form_data'], 1);
 
-if ($userLoggedIn) {
-    header("location: index.php");
-}
+$oldData = json_decode($_SESSION['add_car_form_data'], 1);
 
 ?>
 <!DOCTYPE html>
@@ -28,15 +25,28 @@ if ($userLoggedIn) {
         <div class="banner">
             <div class="banner-text">Premium cars just for you</div>
         </div>
-        <div class="login-form-section">
-            <h2>Login</h2>
-            <form class="login-form" action="login.php" method="POST">
-                <label>E-mail:</label>
-                <input type="email" name="email" value="<?= $oldData['email'] ?? "" ?>">
-                <label>Password:</label>
-                <input type="password" name="password" value="<?= $oldData['password'] ?? "" ?>">
-                <button type="submit" class="submit">Submit</button>
-            </form>
+        <div class="car-update" id="car-list">
+            <div class="update-dialog">
+                <h2>Add a Car</h2>
+                <br>
+                <form action="add_car.php" method="post" enctype="multipart/form-data">
+                    <label>Make:</label>
+                    <input type="text" name="make" value="<?=$oldData['make'] ?? ""?>">
+                    <label>Model:</label>
+                    <input type="text" name="model" value="<?=$oldData['model'] ?? ""?>">
+                    <label>Year:</label>
+                    <input type="text" name="year" value="<?=$oldData['year'] ?? ""?>">
+                    <label>Engine:</label>
+                    <input type="text" name="engine" value="<?=$oldData['engine'] ?? ""?>">
+                    <label>Transmission:</label>
+                    <input type="text" name="transmission" value="<?=$oldData['transmission'] ?? ""?>">
+                    <label>Price:</label>
+                    <input type="text" name="price" value="<?=$oldData['price'] ?? ""?>">
+                    <input id="file" type="file" name="picture" accept=".jpg,.png"> 
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+            <br>
             <div class="messages">
                 <?php
                 echo Messages::get();
@@ -46,9 +56,9 @@ if ($userLoggedIn) {
     </main>
     <footer id="footer"></footer>
     <script>
-        const userLoggedIn = <?= $userLoggedIn; ?>;
+        const userLoggedIn = <?=$userLoggedIn?>;
         const adminLoggedIn = <?=$adminLoggedIn?>;
-        
+
         const interval = 3000;
         let timeout = 3000;
         const myInterval = setInterval(deteleElement, interval);

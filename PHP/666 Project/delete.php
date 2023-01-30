@@ -5,9 +5,14 @@ if ($_SERVER['REQUEST_METHOD'] != "GET") {
     http_response_code("405");
 }
 
-if ($adminLoggedIn && isset($_GET['id'])) {
+if (!adminCheck()) {
+    print_r("Who the fuck are you?");
+    header("location: login_form.php");
+}
+
+if (!isset($_GET['id'])) {
+    die("ID nereikia?");
+} else {
     Car::deleteCarById($_GET['id']);
     header("location: index.php");
-} else {
-    print_r("Who the fuck are you?");
 }

@@ -49,7 +49,7 @@ class Validate {
         }
     }
     
-    public static function setErrorMessage($message): void {
+    public static function setErrorMessage(string $message = ""): void {
             $_SESSION['messages'][] = [
                 'status' => 0,
                 'title' => 'Operation failed.',
@@ -57,10 +57,11 @@ class Validate {
             ];
     }
     
-    public static function setSuccessMessage(): void {
+    public static function setSuccessMessage(string $message = ""): void {
         $_SESSION['messages'][] = [
             'status' => 1,
             'title' => 'Operation successful.',
+            'body' => $message
         ];
     }
     

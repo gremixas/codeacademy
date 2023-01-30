@@ -47,9 +47,11 @@ $newCar = [
     "image" => "miata.png",
 ];
 
-print_r($cars);
+// print_r($cars);
 // print_r($newCar);
-$cars = array_replace($cars, $newCar);
-print_r("replace");
-print_r($cars);
-// print_r($newCar);
+// $cars = array_replace($cars, $newCar);
+// print_r("replace");
+// print_r($cars);
+print_r($newCar);
+unset($newCar['image']);
+print_r($newCar);

@@ -45,11 +45,7 @@ $car = new Car("Mazda", "MX5", "2001", "Petrol", "Manual", "156", "car_images/mi
         </div>
     </main>
     <footer id="footer">
-        <form action="handlers/upload.php" method="post" enctype="multipart/form-data" > 
-            <input type="hidden" name="id" value="555">
-            <input id="file" type="file" name="picture" accept=".jpg,.png"> 
-            <button type="submit">submit</button>
-        </form>
+
     </footer>
     <script>
         const userLoggedIn = <?=$userLoggedIn?>;

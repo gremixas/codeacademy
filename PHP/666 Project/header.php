@@ -22,7 +22,7 @@
             <div class="user-menu-dropdown flex">
                 <?php
                 if ($adminLoggedIn) {
-                    echo "<a href='./admin.php'>Admin page</a>";
+                    echo "<a href='./add_car_form.php'>Add Car</a>";
                 } else {
                     echo "<a href='./bookings.php'>Bookings</a>";
                 }

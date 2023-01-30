@@ -41,7 +41,7 @@ if ($userLoggedIn) {
                 <input type="password" name="password" value="<?= $oldData['password'] ?? "" ?>">
                 <button type="submit" class="submit">Submit</button>
             </form>
-            <div class="register-messages">
+            <div class="messages">
                 <?= Messages::get() ?>
             </div>
         </div>
@@ -49,6 +49,7 @@ if ($userLoggedIn) {
     <footer id="footer"></footer>
     <script>
         const userLoggedIn = <?=$userLoggedIn?>;
+        const adminLoggedIn = <?=$adminLoggedIn?>;
         
         const interval = 3000;
         let timeout = 3000;

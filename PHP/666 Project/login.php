@@ -11,7 +11,8 @@ $_SESSION['login_form_data'] = json_encode($_POST);
 
 (function () {
    
-    $url = "";
+    // $url = "";
+    $url = "login_form.php";
 
     $errorMsgs = Validate::validateData($_POST);
 
@@ -31,7 +32,7 @@ $_SESSION['login_form_data'] = json_encode($_POST);
 
     if ($errorMsgs || !$passwCheck) {
         Validate::setErrorMessages($errorMsgs);
-        $url = "login_form.php";
+        // $url = "login_form.php";
     } else {
         // unset($_SESSION['login_form_data']);
         Validate::setSuccessMessage();
@@ -39,7 +40,7 @@ $_SESSION['login_form_data'] = json_encode($_POST);
         $_SESSION['token'] = $user['password'];
 
         // $url = "bookings.php";
-        $url = "login_form.php";
+        // $url = "login_form.php";
     }
 
     header("Location: $url");

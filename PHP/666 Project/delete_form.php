@@ -27,26 +27,23 @@ if (empty($_GET['id'])) {
         <div class="banner">
             <div class="banner-text">Premium cars just for you</div>
         </div>
-        <div class="car-list" id="car-list">
-            <h2>Do you really wish to delete this car?</h2>
+        <div class="car-delete" id="car-list">
             <br>
-            <form action="delete.php" method="get">
-                <input type="hidden" name="id" value="<?=$_GET['id']?>">
-                <button type="submit">Yes</button>
-            </form>
-            <br>
-            <?php
-                // for ($i=0; $i < 20; $i++) {
-                //     echo "<img class='car-photo' src='https://loremflickr.com/".rand(250, 300)."/".rand(250, 300)."/car'>";
-                // }
-            // dump($adminLoggedIn);
-            echo Car::drawCarById($_GET['id']);
-            ?>
+            <div class="delete-dialog">
+                <h2>Do you really wish to delete this car?</h2>
+                <br>
+                <?= Car::drawCarById($_GET['id']) ?>
+                <form action="delete.php" method="get">
+                    <input type="hidden" name="id" value="<?=$_GET['id']?>">
+                    <button type="submit">Yes</button>
+                </form>
+            </div>
         </div>
     </main>
     <footer id="footer"></footer>
     <script>
         const userLoggedIn = <?=$userLoggedIn?>;
+        const adminLoggedIn = <?=$adminLoggedIn?>;
     </script>
 </body>
 </html>

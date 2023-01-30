@@ -3,6 +3,7 @@
 class Car {
 
     public function __construct(
+        public string $id = "",
         public string $make = "",
         public string $model = "",
         public string $year = "",
@@ -10,7 +11,6 @@ class Car {
         public string $transmission = "",
         public string $price = "",
         public string $image = "",
-        public string $id = "",
     ){}
 
     public static function createCar(Car $car): self {
@@ -21,6 +21,13 @@ class Car {
         $cars[] = $car;
         Database::writeDbFile(CARS_FILE_PATH, $cars);
         return $car;
+    }
+
+    public static function freeId(): int {
+        $cars = Database::readDbFile(CARS_FILE_PATH);
+        $allIds = array_column($cars, "id");
+        $newId = !empty($allIds) ? (max($allIds) + 1) : 1;
+        return $newId;
     }
 
     public static function findCarById(string $id): array {
@@ -36,11 +43,13 @@ class Car {
         return $id;
     }
 
-    public static function updateCar(array $updatedCar): array { /////// UNFINISHED !!!
+    public static function updateCar(array $updatedCar): array {
         $cars = Database::readDbFile(CARS_FILE_PATH);
         $carIndex = array_search($updatedCar['id'], array_column($cars, "id")) ?? "-1";
-        $cars[$carIndex] = $updatedCar;
-        Database::writeDbFile(CARS_FILE_PATH, $cars);
+        if ($carIndex !== "-1") {
+            $cars[$carIndex] = array_replace($cars[$carIndex], $updatedCar);
+            Database::writeDbFile(CARS_FILE_PATH, $cars);
+        }
         return $updatedCar;
     }
 
