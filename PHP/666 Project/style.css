@@ -313,7 +313,7 @@ input {
     aspect-ratio: 1 / 0.75;
     width: 100%;
     object-fit: cover;
-    transition: all 250ms ease-in-out;
+    transition: all 750ms ease-in-out;
     transform-origin: 0 0;
 }
 

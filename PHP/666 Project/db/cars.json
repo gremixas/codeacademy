@@ -3,7 +3,7 @@
         "id": "1",
         "make": "Mazda",
         "model": "MX5",
-        "year": "2001",
+        "year": "2015",
         "engine": "3.6 Petrol",
         "transmission": "Manual",
         "price": "156",
@@ -11,13 +11,13 @@
     },
     {
         "id": "1",
-        "make": "Mazda",
-        "model": "MX5",
-        "year": "2001",
-        "engine": "3.6 Petrol",
-        "transmission": "Manual",
-        "price": "156",
-        "image": "miata.png"
+        "make": "BMW",
+        "model": "M5 CS",
+        "year": "2022",
+        "engine": "4.4 Petrol",
+        "transmission": "Automatic",
+        "price": "256",
+        "image": "bmw-m5-cs.jpg"
     },
     {
         "id": "1",
