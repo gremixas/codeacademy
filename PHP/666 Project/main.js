@@ -1,4 +1,5 @@
-console.log(userLoggedIn ? "User is logged in." : "no login...");
+console.log(userLoggedIn ? "User is logged in." : "no user login...");
+console.log(adminLoggedIn ? "Admin is logged in." : "no admin login...");
 
 if (userLoggedIn) {
     document.querySelector(".login-links").remove();    

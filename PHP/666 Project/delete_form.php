@@ -1,7 +1,10 @@
 <?php
 include_once(__DIR__ . "/app.php");
-$car = new Car("Mazda", "MX5", "2001", "Petrol", "Manual", "156", "car_images/miata.jpg");
-// Car::createCar($car);
+
+if (empty($_GET['id'])) {
+    die("ID nereikia?");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,35 +28,25 @@ $car = new Car("Mazda", "MX5", "2001", "Petrol", "Manual", "156", "car_images/mi
             <div class="banner-text">Premium cars just for you</div>
         </div>
         <div class="car-list" id="car-list">
+            <h2>Do you really wish to delete this car?</h2>
+            <br>
+            <form action="delete.php" method="get">
+                <input type="hidden" name="id" value="<?=$_GET['id']?>">
+                <button type="submit">Yes</button>
+            </form>
+            <br>
             <?php
                 // for ($i=0; $i < 20; $i++) {
                 //     echo "<img class='car-photo' src='https://loremflickr.com/".rand(250, 300)."/".rand(250, 300)."/car'>";
                 // }
             // dump($adminLoggedIn);
-            // Car::updateCar([
-            //     "id" => "5",
-            //     "make" => "Nissan",
-            //     "model" => "Patrol",
-            //     "year" => "1999",
-            //     "engine" => "3.6 Diesel",
-            //     "transmission" => "Auto",
-            //     "price" => "100",
-            //     "image" => "miata.png",
-            // ]);
-            echo Car::drawCars($adminLoggedIn);
+            echo Car::drawCarById($_GET['id']);
             ?>
         </div>
     </main>
-    <footer id="footer">
-        <form action="handlers/upload.php" method="post" enctype="multipart/form-data" > 
-            <input type="hidden" name="id" value="555">
-            <input id="file" type="file" name="picture" accept=".jpg,.png"> 
-            <button type="submit">submit</button>
-        </form>
-    </footer>
+    <footer id="footer"></footer>
     <script>
         const userLoggedIn = <?=$userLoggedIn?>;
-        const adminLoggedIn = <?=$adminLoggedIn?>;
     </script>
 </body>
 </html>

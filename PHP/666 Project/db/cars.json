@@ -10,7 +10,7 @@
         "image": "miata.png"
     },
     {
-        "id": "1",
+        "id": "2",
         "make": "BMW",
         "model": "M5 CS",
         "year": "2022",
@@ -20,7 +20,7 @@
         "image": "bmw-m5-cs.jpg"
     },
     {
-        "id": "1",
+        "id": "3",
         "make": "Mazda",
         "model": "MX5",
         "year": "2001",
@@ -30,7 +30,7 @@
         "image": "miata.png"
     },
     {
-        "id": "1",
+        "id": "4",
         "make": "Mazda",
         "model": "MX5",
         "year": "2001",
@@ -40,23 +40,13 @@
         "image": "miata.png"
     },
     {
-        "id": "1",
-        "make": "Mazda",
-        "model": "MX5",
-        "year": "2001",
-        "engine": "3.6 Petrol",
-        "transmission": "Manual",
-        "price": "156",
-        "image": "miata.png"
-    },
-    {
-        "id": "1",
-        "make": "Mazda",
-        "model": "MX5",
-        "year": "2001",
-        "engine": "3.6 Petrol",
-        "transmission": "Manual",
-        "price": "156",
+        "id": "5",
+        "make": "Nissan",
+        "model": "Patrol",
+        "year": "1999",
+        "engine": "3.6 Diesel",
+        "transmission": "Auto",
+        "price": "100",
         "image": "miata.png"
     }
 ]

@@ -26,6 +26,12 @@ class User {
         $user = array_values(array_filter($users, fn($user) => $user['email'] === $userName))[0] ?? [];
         return $user;
     }
+        
+    public static function findUserById(string $id) {
+        $users = Database::readDbFile(USERS_FILE_PATH);
+        $user = array_values(array_filter($users, fn($user) => $user['id'] === $id))[0] ?? [];
+        return $user;
+    }
     
     public static function findUserByToken(string $token) {
         $users = Database::readDbFile(USERS_FILE_PATH);
