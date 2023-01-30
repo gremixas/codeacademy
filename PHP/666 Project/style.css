@@ -334,8 +334,8 @@ input + input {
 }
 
 .car-card:hover .car-img {
-    scale: 1.2;
-    transform: rotate3d(0, 1, 0, 15deg);
+    scale: 1.1;
+    /* transform: rotate3d(0, 1, 0, 15deg); */
 }
 
 .car-row {
