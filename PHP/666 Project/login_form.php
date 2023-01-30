@@ -38,9 +38,7 @@ if ($userLoggedIn) {
                 <button type="submit" class="submit">Submit</button>
             </form>
             <div class="messages">
-                <?php
-                echo Messages::get();
-                ?>
+                <?= Messages::get() ?>
             </div>
         </div>
     </main>
@@ -66,7 +64,6 @@ if ($userLoggedIn) {
             setTimeout(() => {
                 message.remove();
             }, timeout - 100);
-            // timeout = timeout + interval;
         }
     </script>
 </body>

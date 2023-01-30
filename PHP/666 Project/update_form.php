@@ -7,7 +7,6 @@ if (empty($_GET['id'])) {
     die("ID nereikia?");
 } else {
     $carData = Car::findCarById($_GET['id']);
-    // dd($carData);
 }
 
 ?>
@@ -58,9 +57,7 @@ if (empty($_GET['id'])) {
             </div>
             <br>
             <div class="messages">
-                <?php
-                echo Messages::get();
-                ?>
+                <?= Messages::get() ?>
             </div>
         </div>
     </main>

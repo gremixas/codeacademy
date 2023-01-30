@@ -48,9 +48,7 @@ $oldData = json_decode($_SESSION['add_car_form_data'], 1);
             </div>
             <br>
             <div class="messages">
-                <?php
-                echo Messages::get();
-                ?>
+                <?= Messages::get() ?>
             </div>
         </div>
     </main>
@@ -76,7 +74,6 @@ $oldData = json_decode($_SESSION['add_car_form_data'], 1);
             setTimeout(() => {
                 message.remove();
             }, timeout - 100);
-            // timeout = timeout + interval;
         }
     </script>
 </body>

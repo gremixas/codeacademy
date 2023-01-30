@@ -1,7 +1,5 @@
 <?php
 include_once(__DIR__ . "/app.php");
-$car = new Car("Mazda", "MX5", "2001", "Petrol", "Manual", "156", "car_images/miata.jpg");
-// Car::createCar($car);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,27 +23,10 @@ $car = new Car("Mazda", "MX5", "2001", "Petrol", "Manual", "156", "car_images/mi
             <div class="banner-text">Premium cars just for you</div>
         </div>
         <div class="car-list" id="car-list">
-            <?php
-                // for ($i=0; $i < 20; $i++) {
-                //     echo "<img class='car-photo' src='https://loremflickr.com/".rand(250, 300)."/".rand(250, 300)."/car'>";
-                // }
-            // dump($adminLoggedIn);
-            // Car::updateCar([
-            //     "id" => "5",
-            //     "make" => "Nissan",
-            //     "model" => "Patrol",
-            //     "year" => "1999",
-            //     "engine" => "3.6 Diesel",
-            //     "transmission" => "Auto",
-            //     "price" => "100",
-            //     "image" => "miata.png",
-            // ]);
-            echo Car::drawCars($adminLoggedIn);
-            ?>
+            <?= Car::drawCars($adminLoggedIn) ?>
         </div>
     </main>
     <footer id="footer">
-
     </footer>
     <script>
         const userLoggedIn = <?=$userLoggedIn?>;

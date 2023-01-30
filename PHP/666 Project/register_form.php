@@ -68,7 +68,6 @@ if ($userLoggedIn) {
             setTimeout(() => {
                 message.remove();
             }, timeout - 100);
-            // timeout = timeout + interval;
         }
     </script>
 </body>
