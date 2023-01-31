@@ -26,3 +26,13 @@ function deleteElement() {
         message.remove();
     }, timeout - 100);
 }
+
+if (!adminLoggedIn && userLoggedIn) {// only if simple user is logged in then onClick go to booking page
+    const allCars = document.querySelectorAll(".car-card");
+    allCars.forEach(car => {
+        const carid = car.attributes.getNamedItem('data-carid').nodeValue;
+        car.addEventListener("click", () => {
+            window.location = "./booking_form.php?id=" + carid;
+        });
+    });
+}

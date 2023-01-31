@@ -302,7 +302,7 @@ input + input {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(325px, 425px) ) ;
-    margin: 2rem;
+    margin: 2rem 0;
     justify-content: center;
 }
 
@@ -419,6 +419,7 @@ input + input {
     right: 20%;
 }
 
+.booking-dialog,
 .delete-dialog,
 .update-dialog {
     display: grid;
@@ -426,6 +427,7 @@ input + input {
     padding: 3rem;
 }
 
+.booking-dialog > form,
 .delete-dialog > form,
 .update-dialog > form {
     display: grid;
