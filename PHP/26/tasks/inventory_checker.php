@@ -4,27 +4,25 @@ declare(strict_types=1);
 
 date_default_timezone_set("Europe/Vilnius");
 
+$inventoryFilePath = __DIR__ . "/inventory.json";
+
 class InventoryException extends \Exception{}
-class InputValidationException extends InventoryException{}
+class InputValidationException extends \Exception{}
 
 class Inventory {
-    public function __construct(
-        public string $jsonFilePath,
-        public string $logFilePath,
-        ){}
+    public string $logFilePath = __DIR__ . "/log.txt";
 
-    public function checkInventory(): void
+    public function checkInventory(array $data): void
     {
         global $argv;
         
-        $data = json_decode(file_get_contents($this->jsonFilePath), true);
-        
         $args = explode(",", $argv[1]);
-        // print_r($args);
+
         foreach ($args as $arg)
         {
-            list($id, $quantity) = explode(':', $arg);
+            [$id, $quantity] = explode(':', $arg);
             $product = array_values(array_filter($data, fn($product) => $product['product_id'] == $id))[0] ?? [];
+
             if (empty($product))
             {
                 throw new InventoryException("product id=" . $id . " is not in the inventory");
@@ -34,11 +32,12 @@ class Inventory {
                 throw new InventoryException("product id=" . $product['product_id'] . " -> " . $product['name'] . " <- only has " . $product['quantity'] . " items in the inventory");
             }
         }
+        echo "all products have the requested quantity in stock" . PHP_EOL;
     }
 
     public function logError(string $text): string
     {
-        $logFile = file_get_contents($this->logFilePath);
+        $logFile = file_exists($this->logFilePath) ? file_get_contents($this->logFilePath) : "";
         $logEntry = date('Y-m-d H:i:s ') . $text . PHP_EOL;
         file_put_contents($this->logFilePath, $logFile . $logEntry);
         return $text;
@@ -49,25 +48,28 @@ class InputValidation {
     public function checkSyntax(): void
     {
         global $argv;
-        $args = explode(",", $argv[1]);
-
+        $chkPar = $argv[1] ?? "";
+        $args = explode(",", $chkPar);
         foreach ($args as $arg)
         {
-            list($id, $quantity) = explode(':', $arg);
+            $variables = explode(':', $arg);
+            $id = $variables[0] ?? null;
+            $quantity = $variables[1] ?? null;
+
             if (!is_numeric($id) || !is_numeric($quantity))
             {
-                throw new InputValidationException("Invalid input " . $argv[1] . ". Format: id:quantity,id:quantity");
+                throw new InputValidationException("Invalid input " . $chkPar . ". Format: id:quantity,id:quantity");
             }
         }
     }
 }
 
-$inventory = new Inventory(__DIR__ . "/inventory.json", __DIR__ . "/log.txt");
+$inventory = new Inventory();
 $inputvalidation = new InputValidation();
 
 try {
     $inputvalidation->checkSyntax();
-    $inventory->checkInventory();
+    $inventory->checkInventory(json_decode(file_get_contents($inventoryFilePath), true));
 } catch (InputValidationException $e) {
     echo $e->getMessage();
 } catch (InventoryException $e) {
