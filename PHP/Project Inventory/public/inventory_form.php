@@ -7,13 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="inventory_form.php">Inventory Checker</a>
-    <div class="msg">
-        <?php
-        if (isset($_GET['msg'])) {
-            echo $_GET['msg'];
-        }
-        ?>
-    </div>
+    <form action="inventory_check.php" method="POST">
+        <input type="text" name="check" value="1:3,2:2,4:1">
+        <button type="submit">Check</button>
+    </form>
 </body>
 </html>

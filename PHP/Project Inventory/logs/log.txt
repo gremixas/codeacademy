@@ -21,3 +21,12 @@
 2023-02-02 20:23:15 product id=5 -> Shelf <- only has 0 items in the inventory
 2023-02-02 20:42:31 product id=5 -> Shelf <- only has 0 items in the inventory
 2023-02-02 20:45:36 product id=1 -> Lamp <- only has 15 items in the inventory
+2023-02-02 21:14:51 product id=5 -> Shelf <- only has 5 items in the inventory
+2023-02-02 21:15:02 product id=5 -> Shelf <- only has 0 items in the inventory
+2023-02-02 21:28:06 product id=4 -> Desk <- only has 2 items in the inventory
+2023-02-02 21:28:16 product id=45 is not in the inventory
+2023-02-02 21:28:44 product id=5 -> Shelf <- only has 0 items in the inventory
+2023-02-02 21:29:11 product id=5 -> Shelf <- only has 5 items in the inventory
+2023-02-02 21:29:24 product id=5 -> Shelf <- only has 0 items in the inventory
+2023-02-02 21:45:29 product id=4 -> Desk <- only has 2 items in the inventory
+2023-02-02 21:45:35 product id=10 is not in the inventory
