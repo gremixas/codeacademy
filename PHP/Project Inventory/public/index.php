@@ -9,6 +9,18 @@ use src\InventoryException;
 use src\InputValidation;
 use src\InputValidationException;
 
+const INVENTORY_FILE_PATH = __DIR__ . "/../database/inventory.json";
+
+// $inventory = new Inventory(json_decode(file_get_contents(INVENTORY_FILE_PATH), true));
+$inventory = new Inventory();
+$inputvalidation = new InputValidation();
+
+if (isset($_GET['check']) && $_GET['check'] !== "") {
+    $checkString = $_GET['check'];
+} else {
+    $checkString = $_GET['check'] = "1:3,2:2,4:1";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,19 +37,6 @@ use src\InputValidationException;
     </form>
     <div class="message">
         <?php
-
-        $inventoryFilePath = __DIR__ . "/../database/inventory.json";
-
-        // $inventory = new Inventory(json_decode(file_get_contents($inventoryFilePath), true));
-        $inventory = new Inventory();
-        $inputvalidation = new InputValidation();
-        
-        if (isset($_GET['check']) && $_GET['check'] !== "") {
-            $checkString = $_GET['check'];
-        } else {
-            $checkString = "1:3,2:2,4:1";
-        }
-
         try {
             $inputvalidation->checkSyntax($checkString);
             $inventory->checkInventory($checkString);
