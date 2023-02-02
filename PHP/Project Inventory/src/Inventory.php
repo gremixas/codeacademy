@@ -10,8 +10,8 @@ class Inventory {
 
     public function __construct(public array $inventoryData = [])
     {
-        if (empty($data)){
-            $this->setInventory(); 
+        if (empty($inventoryData)){
+            $this->getInventory(); 
         }
     }
 
@@ -47,7 +47,7 @@ class Inventory {
         return $text;
     }
 
-    public function setInventory():void
+    public function getInventory():void
     {
         $this->inventoryData = json_decode(file_get_contents(self::INVENTORY_FILE_PATH), true);
     }

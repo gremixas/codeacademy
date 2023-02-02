@@ -11,9 +11,7 @@ use src\InputValidationException;
 
 const INVENTORY_FILE_PATH = __DIR__ . "/../database/inventory.json";
 
-// $inventory = new Inventory(json_decode(file_get_contents(INVENTORY_FILE_PATH), true));
-$inventory = new Inventory();
-$inputvalidation = new InputValidation();
+$checkString = "";
 
 if (isset($_GET['check']) && $_GET['check'] !== "") {
     $checkString = $_GET['check'];
@@ -38,8 +36,15 @@ if (isset($_GET['check']) && $_GET['check'] !== "") {
     <div class="message">
         <?php
         try {
-            $inputvalidation->checkSyntax($checkString);
-            $inventory->checkInventory($checkString);
+            
+            // $inputvalidation = new InputValidation();
+            // $inputvalidation->checkSyntax($checkString);
+            (new InputValidation())->checkSyntax($checkString);
+            
+            // $inventory = new Inventory(json_decode(file_get_contents(INVENTORY_FILE_PATH), true));
+            // $inventory = new Inventory();
+            // $inventory->checkInventory($checkString);
+            (new Inventory)->checkInventory($checkString);
             echo "all products have the requested quantity in stock" . PHP_EOL;
         } catch (InputValidationException $e) {
             echo $e->getMessage();
