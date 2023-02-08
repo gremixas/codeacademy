@@ -9,7 +9,7 @@ class Game
     public function index()
     {
         $games = (new services\JsonData(PATH))->getAll();
-        include __DIR__ . "/../templates/games/index.php";
+        (new services\Template("games/index.php", compact('games')))->render();
     }
 
     public function show(int $id)
@@ -20,6 +20,6 @@ class Game
             die("Game not found.");
         }
 
-        include __DIR__ . "/../templates/games/show.php";
+        (new services\Template("games/show.php", compact('game')))->render();
     }
 }

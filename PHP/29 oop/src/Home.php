@@ -7,6 +7,7 @@ class Home
     public function index()
     {
         $msg = "omg";
-        include __DIR__ . "/../templates/home.php";
+        view("home.php", compact('msg'));
+        // (new services\Template("home.php", compact('msg')))->render();
     }
 }
