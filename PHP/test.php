@@ -64,4 +64,4 @@ foreach($cars as $car)
     }
 }
 
-print_r($car);
+// print_r($car);

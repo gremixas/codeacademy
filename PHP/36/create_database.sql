@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS `games_and_more`;
+CREATE DATABASE IF NOT EXISTS `movie_rentals`;
