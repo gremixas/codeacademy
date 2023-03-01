@@ -22,9 +22,9 @@ class Movie {
     
     public function insert(array $movie): void {
         $sql = "INSERT INTO `movie_rentals`.`movies`
-        (`title`, `description`, `release_date`, `runtime`, `rating`, `image`)
-        VALUES
-        (:title, :description, :release_date, :runtime, :rating, :image)";
+                    (`title`, `description`, `release_date`, `runtime`, `rating`, `image`)
+                VALUES
+                    (:title, :description, :release_date, :runtime, :rating, :image)";
 
         $stmt = $this->connection->prepare($sql);
 
