@@ -1,0 +1,15 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 150px;
+    margin: 20px
+}
+
+body {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}

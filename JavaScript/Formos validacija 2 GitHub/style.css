@@ -1,0 +1,37 @@
+form {
+    width: 200px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 18px;
+  }
+  
+  small {
+    color: red;
+    display: block;
+    font-size: 11px;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 25px;
+  }
+  
+  .success {
+    border: 1px solid green;
+  }
+  
+  .error {
+    border: 1px solid red;
+  }
+  

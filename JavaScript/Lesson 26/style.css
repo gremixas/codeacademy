@@ -1,0 +1,145 @@
+:root {
+    --main-color: #03b4e0;
+    --progress-color: rgb(5, 110, 196);
+}
+  
+.main-color-text {
+    color: var(--main-color);
+}
+
+.progress-bar {
+    width: 100%;
+    border: 1px solid var(--main-color);
+    height: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+  
+.progress-bar::after {
+    content: '';
+    /* --progress: 50; */
+    position: absolute;
+    height: 0.5rem;
+    background-color: var(--main-color);
+    border-radius: 0.25rem;
+    transform: translateY(-50%);
+    top: 0.5rem;
+    left: 0.25rem;
+    width: calc(calc(var(--progress, 0) * 1%) - 0.5rem);
+    min-width: 0.5rem;
+    transition: all 1000ms ease-in-out;
+}
+  
+.progress-bar::before {
+    content: attr(skill-lvl)'%';
+    color: #bbb;
+    font-size: 0.85rem;
+    position: absolute;
+    top: -1.25rem;
+    right: 0.5rem;
+}
+  
+body {
+    font-family: 'Roboto', sans-serif;
+    /* margin: 2rem; */
+    background-color: #eee;
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* scale: 0.7; */
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-color);
+    min-height: fit-content;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 3rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-top: 10%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.experience-side {
+    background-color: white;
+    width: 100%;
+    border-radius: 3rem;
+    text-align: left;
+    padding: 2rem;
+}
+
+.card > img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.exp-card {
+    display: flex;
+    gap: 2rem;
+    line-height: 1.5rem;
+}
+
+.exp-left {
+    width: 30%;
+    text-align: right;
+}
+
+.exp-right {
+    width: 70%;
+}
+
+.skills > .progress-bar {
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+}
+
+.section-header {
+    display: none;
+}
+
+.rights {
+    margin: 1rem;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.profession {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+.position {
+    font-weight: 800;
+}
+
+.company-name {
+    color: #bbb;
+    font-weight: 400;
+}
+
+.skill-name {
+    font-weight: 600;
+}

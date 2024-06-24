@@ -1,0 +1,26 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.profile {
+    background-color: white;
+    min-width: 500px;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.profile > * {
+    padding: 1.5rem;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 900;
+}

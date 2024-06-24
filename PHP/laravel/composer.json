@@ -1,0 +1,14 @@
+{
+    "name": "andrius/laravel",
+    "autoload": {
+        "psr-4": {
+            "Andrius\\Laravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aaa"
+        }
+    ],
+    "require": {}
+}

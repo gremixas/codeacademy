@@ -1,0 +1,78 @@
+:root {
+    --main-color: #02D4b1;
+}
+
+header {
+    display: grid;
+    place-items: center;
+    background-color: var(--main-color);
+    height: 10rem;
+}
+
+.header-text {
+    color: white;
+}
+
+.btn {
+    outline: 2px solid grey;
+}
+
+.btn:hover, .btn:focus {
+    /* outline: 2px solid grey; */
+    background-color: grey;
+    color: white;
+}
+
+.btn-active {
+    outline: 2px solid var(--main-color);
+}
+
+.btn-active:hover, .btn-active:focus {
+    background-color: var(--main-color);
+}
+
+.add-property-btn {
+    background-color: var(--main-color);
+    outline: 2px solid var(--main-color);
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+
+.add-property-btn:hover, .add-property-btn:focus {
+    background-color: var(--main-color);
+    outline: 2px solid var(--main-color);
+    color: white;
+    scale: 1.125;
+}
+
+.btn + .btn {
+    margin-left: 1rem;
+}
+
+form > *:not(.btn, #select) {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.btn {
+    margin-top: 2rem;
+    display: block;
+}
+
+h3 {
+    margin: 2rem 0;
+}
+
+label {
+    font-weight: bold;
+    margin: 1rem 0 0.5rem 0;
+}
+
+form > input, textarea, select {
+    padding: 0.5rem;
+}
+
+.error-msg {
+    margin-top: 1rem;
+}

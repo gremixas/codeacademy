@@ -1,0 +1,6 @@
+2023-02-01 18:53:26 product id=4 -> Desk <- only has 2 items in the inventory
+2023-02-01 18:58:57 product id=9 is not in the inventory
+2023-02-01 19:31:27 product id=9 is not in the inventory
+2023-02-01 19:33:04 product id=9 is not in the inventory
+2023-02-01 19:34:18 product id=9 is not in the inventory
+2023-02-01 19:34:26 product id=5 -> Shelf <- only has 0 items in the inventory

@@ -1,0 +1,61 @@
+form{
+    margin: auto;
+}
+
+form input[type="submit"]:hover{
+    cursor:pointer;
+    background-color: #a6a6c0;
+    border: 1px solid #343483;
+    color: white;
+}
+
+form input[type="submit"]:active{
+    background-color: #8888be;
+}
+
+section#login-form form{
+    width: 500px;
+}
+
+section#search form input[type="submit"]{
+    width: auto;
+    margin: 15px auto;
+}
+
+form input, 
+form textarea,
+form select {
+    font-size: 1.2em;
+    box-sizing: border-box;
+    min-height: 50px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px black solid;
+    border-radius: 2px;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+form label{
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    height: 35px;
+}
+
+form input {
+    background-color: white;
+    border: 1px solid #343483;
+}
+
+form label {
+    margin: 5px 0 10px 0;
+}
+
+form input[type="submit"] {
+    margin-top: 15px;
+}

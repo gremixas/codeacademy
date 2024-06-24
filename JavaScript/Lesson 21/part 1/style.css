@@ -1,0 +1,50 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.profile {
+    background-color: white;
+    min-width: 250px;
+    padding-bottom: 2rem;
+}
+
+.profile > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.profile > * {
+    padding-bottom: 1.5rem;
+}
+
+img {
+    width: 100%;
+}
+
+.age, .name {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.age {
+    color: rgb(73, 204, 160);
+}
+
+.email {
+    font-size: 1.125rem;
+    color: #999;
+    font-weight: bold;
+
+}
+
+.profile > div, .email {
+    margin: 0 2rem;
+}

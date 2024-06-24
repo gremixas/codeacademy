@@ -1,0 +1,6 @@
+
+ALTER TABLE tableName
+ADD CONSTRAINT fk_name
+FOREIGN KEY ('some_id')
+REFERENCES `reference_table`(`id`)
+ON UPDATE CASCADE ON DELETE RESTRICT;
